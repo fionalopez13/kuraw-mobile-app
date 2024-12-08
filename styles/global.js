@@ -9,18 +9,18 @@ export default StyleSheet.create({
       header: {
         backgroundColor: "black",
         marginTop: 50,
-        padding: 15,
+        padding: 12,
         flexDirection: "row", // Aligns logo, menu, and icon horizontally
         justifyContent: "space-between", // Spacing between logo, menu, and icon
         alignItems: "center", // Centers items vertically
       },
     
       logo: {
-        width: 200,
-        height: 200,
+        width: 150,
+        height: 150,
         marginTop: 30,
         marginBottom: 10,
-        marginLeft: 105,
+        marginLeft: 135,
         borderRadius: 30,
         resizeMode: "contain",
       },
@@ -32,7 +32,14 @@ export default StyleSheet.create({
       icon: {
         fontSize: 24,
         color: "white",
-        marginLeft: 350,
+        marginRight: 10,
+      },
+
+      logoicon: {
+        width: 20,
+        height: 40,
+        marginRight: 190,
+        marginLeft: 15,
       },
     
       heroSection: {
@@ -72,6 +79,21 @@ export default StyleSheet.create({
       },
     
       orderHistoryText: {
+        color: "white",
+        fontWeight: "bold",
+        fontSize: 16,
+      },
+
+      reservationButton: {
+        backgroundColor: "black",
+        padding: 15,
+        marginTop: 10,
+        borderRadius: 10,
+        width: "80%",
+        alignItems: "center",
+      },
+      
+      reservationText: {
         color: "white",
         fontWeight: "bold",
         fontSize: 16,

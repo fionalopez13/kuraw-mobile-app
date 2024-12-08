@@ -105,12 +105,12 @@ return (
           <RNText style={styles.linkText}>Sign Up</RNText>
         </TouchableOpacity>
       </View>
-      <View style={styles.linkContainer}>
+      {/* <View style={styles.linkContainer}>
       <RNText style={styles.text}>Forgot you password?</RNText>
         <TouchableOpacity onPress={() => navigation.navigate('#')}>
           <RNText style={styles.linkText}>Recover</RNText>
         </TouchableOpacity>
-      </View>
+      </View> */}
         </View>
 
   );

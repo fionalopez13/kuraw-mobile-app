@@ -2,6 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { CartProvider } from "./pages/CartContext";
+import { ReservationProvider } from "./pages/ReservationContext";
 
 import HomePage from './pages/HomePage';
 import RegisterPage from "./pages/RegisterPage";
@@ -12,6 +13,9 @@ import UserPage from './pages/UserPage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
 import LandingPage from './pages/LandingPage';
+import ReservationPage from './pages/ReservationPage';
+import ReservationHistory from './pages/ReservationHistory'
+
 
 
 
@@ -20,6 +24,7 @@ const Stack = createStackNavigator();
 
 const App = () => {
   return (
+    <ReservationProvider>
     <CartProvider>
     <NavigationContainer>
       <Stack.Navigator initialRouteName="LandingPage">
@@ -32,9 +37,12 @@ const App = () => {
         <Stack.Screen name="History" component={HistoryPage} options={{headerShown: false}}/> 
         <Stack.Screen name="User" component={UserPage} options={{headerShown: false}}/>  
         <Stack.Screen name="Checkout" component={CheckoutPage} options={{headerShown: false}}/> 
+        <Stack.Screen name="Reservation" component={ReservationPage} options={{headerShown: false}}/> 
+        <Stack.Screen name="ReservationHistory" component={ReservationHistory} options={{headerShown: false}}/> 
       </Stack.Navigator>
     </NavigationContainer>
     </CartProvider>
+    </ReservationProvider>
   );
 };
 

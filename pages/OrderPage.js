@@ -64,7 +64,7 @@ const OrderPage = () => {
   const [temperature, setTemperature] = useState("");
   const [selectedItem, setSelectedItem] = useState(null);
 
-  const { cart, addToCart } = useCart(); // Access global cart and addToCart
+  const { cart, addToCart } = useCart(); 
   const navigation = useNavigation();
 
   const openModal = (item) => {
@@ -380,6 +380,7 @@ const OrderPage = () => {
                 source={require("../assets/menu/mixedberries.jpg")}
                 style={styles.image}
               />
+              
               <Text style={styles.title}>Mixed Berries</Text>
               <Text style={styles.title}>Iced Regular: ₱109</Text>
               <TouchableOpacity

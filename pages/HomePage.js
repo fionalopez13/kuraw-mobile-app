@@ -49,9 +49,13 @@ export default function HomePage() {
   return (
     <ScrollView style={globalStyles.container}>
       <View style={globalStyles.header}>
+        <Image
+          source={require("../assets/kuraw.png")}
+          style={globalStyles.logoicon}
+        />
           <TouchableOpacity 
             style={globalStyles.icon} 
-            onPress={() => navigation.navigate('User')}  // Navigate to UserPage
+            onPress={() => navigation.navigate('User')}  
           >
             <Icon name="user" size={30} color="white" />
           </TouchableOpacity>
@@ -64,19 +68,22 @@ export default function HomePage() {
         />
       </View>
 
+
+
       <View style={globalStyles.heroSection}>
         <TouchableOpacity
           style={globalStyles.orderNowButton}
-          onPress={() => navigation.navigate("Order")} // Navigate to Register
+          onPress={() => navigation.navigate("Order")} 
         >
           <Text style={globalStyles.orderNowText}>Order Now</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity 
-          style={globalStyles.orderHistoryButton}
-          onPress={() => navigation.navigate("History")}
+        <TouchableOpacity
+          style={globalStyles.reservationButton}
+          onPress={() => navigation.navigate("Reservation")}
         >
-          <Text style={globalStyles.orderHistoryText}>Order History</Text>
+        <Text style={globalStyles.reservationText}>Reservation</Text>
+
 
         </TouchableOpacity>
       </View>
